@@ -9,8 +9,6 @@ import org.hibernate.Session;
 
 public class Main {
     public static void main(String[] args) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-
         for(Person person: new AuthorHelper().getPersonList()) {
             System.out.println("author (" + person.getName() + " )");
         }
